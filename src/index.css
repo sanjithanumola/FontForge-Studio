@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .checkerboard-bg {
+    background-color: #121217;
+    background-image:
+      linear-gradient(45deg, #1e1e26 25%, transparent 25%),
+      linear-gradient(-45deg, #1e1e26 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #1e1e26 75%),
+      linear-gradient(-45deg, transparent 75%, #1e1e26 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  .checkerboard-bg-light {
+    background-color: #f1f5f9;
+    background-image:
+      linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+      linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+      linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
