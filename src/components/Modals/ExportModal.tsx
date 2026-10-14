@@ -62,9 +62,10 @@ export const ExportModal: React.FC<ExportModalProps> = ({
       showStatus(
         `Successfully exported ${exportWidth}×${exportHeight}px PNG!`
       );
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      showStatus('Failed to generate PNG image. Please try again.', 'error');
+      const msg = err?.message || 'Failed to generate PNG image.';
+      showStatus(msg, 'error');
     } finally {
       setIsExporting(false);
     }
